@@ -19,3 +19,4 @@ dnf5 -y install intel-oneapi-common-vars \
                 intel-oneapi-dnnl-devel \
                 intel-oneapi-dnnl \
                 intel-oneapi-tcm
+0
