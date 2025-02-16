@@ -70,7 +70,29 @@ dnf5 -y install @virtualization \
                 koko \
                 kamoso \
                 kdiskmark
-    
+
+dnf5 -y install intel-oneapi-common-vars \
+                intel-oneapi-common-oneapi-vars \
+                intel-oneapi-diagnostics-utility \
+                intel-oneapi-compiler-dpcpp-cpp \
+                intel-oneapi-dpcpp-ct \
+                intel-oneapi-mkl \
+                intel-oneapi-mkl-devel \
+                intel-oneapi-mpi \
+                intel-oneapi-mpi-devel \
+                intel-oneapi-dal \
+                intel-oneapi-dal-devel \
+                intel-oneapi-ippcp \
+                intel-oneapi-ippcp-devel \
+                intel-oneapi-ipp \
+                intel-oneapi-ipp-devel \
+                intel-oneapi-tlt \
+                intel-oneapi-ccl \
+                intel-oneapi-ccl-devel \
+                intel-oneapi-dnnl-devel \
+                intel-oneapi-dnnl \
+                intel-oneapi-tcm \
+
 #### Example for enabl a System Unit File
 
 systemctl disable ModemManager.service \
