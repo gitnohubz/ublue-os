@@ -74,7 +74,8 @@ dnf5 -y install @virtualization \
                 elisa \
                 gwenview \
                 gcc \
-
+                libreoffice-TexMaths \
+                libreoffice
                 
 #pip install topgrade
 #### Example for enabl a System Unit File
