@@ -46,6 +46,7 @@ dnf5 -y remove amd* \
 ### install pkgs : 
 dnf5 -y install @virtualization \
                 vdpauinfo \
+                libvdpau-va-gl \
                 intel-compute-runtime \
                 rng-tools \
                 krdc \
