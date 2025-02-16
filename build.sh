@@ -69,8 +69,9 @@ dnf5 -y install @virtualization \
                 arianna \
                 koko \
                 kamoso \
-                kdiskmark \
-                syncthing
+                syncthing \
+                okular \
+                libreoffice
 
                 
 #pip install topgrade
