@@ -91,7 +91,7 @@ dnf -y install intel-oneapi-common-vars \
                 intel-oneapi-ccl-devel \
                 intel-oneapi-dnnl-devel \
                 intel-oneapi-dnnl \
-                intel-oneapi-tcm \
+                intel-oneapi-tcm
 
 #### Example for enabl a System Unit File
 
