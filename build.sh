@@ -71,7 +71,7 @@ dnf5 -y install @virtualization \
                 kamoso \
                 kdiskmark
 
-dnf5 -y install intel-oneapi-common-vars \
+dnf -y install intel-oneapi-common-vars \
                 intel-oneapi-common-oneapi-vars \
                 intel-oneapi-diagnostics-utility \
                 intel-oneapi-compiler-dpcpp-cpp \
