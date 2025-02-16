@@ -85,3 +85,8 @@ systemctl disable ModemManager.service \
                   lvm2-monitor.service \
                   fstrim.service \
                   cups.socket
+
+systemctl enable libvirtd.socket \
+                  fail2ban.service \
+                  fwupd-refresh.timer \
+                  usbguard.service
