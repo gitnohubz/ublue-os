@@ -44,7 +44,8 @@ dnf5 -y remove amd* \
               kate \
               krfb
 ### install pkgs : 
-dnf5 -y install @virtualization \
+dnf5 -y install virtualization \
+                development-tools \
                 vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
@@ -73,7 +74,6 @@ dnf5 -y install @virtualization \
                 okular \
                 elisa \
                 gwenview \
-                gcc \
                 libreoffice-TexMaths \
                 libreoffice
                 
