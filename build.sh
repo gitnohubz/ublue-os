@@ -42,7 +42,8 @@ dnf5 -y remove amd* \
               nvidia* \
               kde-partitionmanager \
               kate \
-              krfb
+              krfb \
+              docker
 ### install pkgs : 
 dnf5 -y install virtualization \
                 development-tools \
