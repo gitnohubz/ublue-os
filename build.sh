@@ -71,7 +71,10 @@ dnf5 -y install @virtualization \
                 kamoso \
                 syncthing \
                 okular \
-                libreoffice
+                libreoffice \
+                elisa \
+                gwenview \
+                gcc \
 
                 
 #pip install topgrade
