@@ -54,7 +54,6 @@ dnf5 -y install @virtualization \
                 ktikz \
                 kbibtex \
                 kitty \
-                libreoffice-TexMaths \
                 kubernetes-client \
                 docker-compose \
                 fail2ban \
@@ -71,7 +70,6 @@ dnf5 -y install @virtualization \
                 kamoso \
                 syncthing \
                 okular \
-                libreoffice \
                 elisa \
                 gwenview \
                 gcc \
