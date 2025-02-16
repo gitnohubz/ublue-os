@@ -45,8 +45,8 @@ dnf5 -y remove amd* \
               krfb \
               docker
 ### install pkgs : 
-dnf5 -y install virtualization \
-                development-tools \
+dnf5 -y install @virtualization \
+                @development-tools \
                 vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
