@@ -89,4 +89,5 @@ systemctl disable ModemManager.service \
 systemctl enable libvirtd.socket \
                   fail2ban.service \
                   fwupd-refresh.timer \
-                  usbguard.service
+                  usbguard.service \
+                  rngd.service
