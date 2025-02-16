@@ -18,7 +18,63 @@ set -ouex pipefail
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
+### add custom yum repos :
+tee /etc/yum.repos.d/vscode.repo << EOF
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
 
-#### Example for enabling a System Unit File
+tee > /etc/yum.repos.d/oneAPI.repo << EOF
+[oneAPI]
+name=Intel® oneAPI repository
+baseurl=https://yum.repos.intel.com/oneapi
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+EOF
+### delete pkgs :
+dnf5 -y remove amd* \
+              nvidia* \
+              kde-partitionmanager \
+              kate \
+              krfb
+### install pkgs : 
+dnf5 -y install @virtualization \
+                vdpauinfo \
+                intel-compute-runtime \
+                rng-tools \
+                krdc \
+                usbguard-notifier \
+                kile \
+                ktikz \
+                kbibtex \
+                kitty \
+                libreoffice-TexMaths \
+                kubernetes-client \
+                docker-compose \
+                fail2ban \
+                fastfetch \
+                podlet \
+                gdisk \
+                code \
+                htop \
+                thunderbird \
+                torbrowser-launcher \
+                qbittorrent \
+                arianna \
+                koko \
+                kamoso \
+                kdiskmark
+    
+#### Example for enabl a System Unit File
 
-#systemctl enable podman.socket
+systemctl disable ModemManager.service \
+                  lvm2-lvmpolld.socket \
+                  lvm2-monitor.service \
+                  fstrim.service \
+                  cups.socket
