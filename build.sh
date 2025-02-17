@@ -44,10 +44,9 @@ dnf5 -y remove amd* \
               kate \
               krfb \
               docker
+
 ### install pkgs : 
-dnf5 -y install @virtualization \
-                @development-tools \
-                vdpauinfo \
+dnf5 -y install vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
                 rng-tools \
@@ -80,7 +79,9 @@ dnf5 -y install @virtualization \
                 OpenCL-ICD-Loader \
                 tpm2-pkcs11 \
                 tpm2-openssl
-                
+### groups :
+dnf5 -y group install development-tools virtualization
+
 #pip install topgrade
 #### Example for enabl a System Unit File
 
