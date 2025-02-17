@@ -76,7 +76,8 @@ dnf5 -y install @virtualization \
                 elisa \
                 gwenview \
                 libreoffice-TexMaths \
-                libreoffice
+                libreoffice \
+                OpenCL-ICD-Loader
                 
 #pip install topgrade
 #### Example for enabl a System Unit File
