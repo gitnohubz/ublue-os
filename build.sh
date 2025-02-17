@@ -83,7 +83,7 @@ dnf5 -y install vdpauinfo \
 dnf5 -y group install development-tools virtualization
 
 ### 
-dnf5 -y install --allowerasin OpenCL-ICD-Loader
+dnf5 -y install --allowerasing OpenCL-ICD-Loader
 
 #pip install topgrade
 #### Example for enabl a System Unit File
