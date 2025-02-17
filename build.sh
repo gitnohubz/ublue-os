@@ -77,7 +77,9 @@ dnf5 -y install @virtualization \
                 gwenview \
                 libreoffice-TexMaths \
                 libreoffice \
-                OpenCL-ICD-Loader
+                OpenCL-ICD-Loader \
+                tpm2-pkcs11 \
+                tpm2-openssl
                 
 #pip install topgrade
 #### Example for enabl a System Unit File
