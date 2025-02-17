@@ -37,6 +37,7 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
+
 ### delete pkgs :
 dnf5 -y remove amd* \
               nvidia* \
@@ -76,11 +77,13 @@ dnf5 -y install vdpauinfo \
                 gwenview \
                 libreoffice-TexMaths \
                 libreoffice \
-                OpenCL-ICD-Loader \
                 tpm2-pkcs11 \
                 tpm2-openssl
 ### groups :
 dnf5 -y group install development-tools virtualization
+
+### 
+dnf5 -y install --allowerasin OpenCL-ICD-Loader
 
 #pip install topgrade
 #### Example for enabl a System Unit File
