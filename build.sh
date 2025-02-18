@@ -2,15 +2,10 @@
 
 set -ouex pipefail
 
-### Install packages
-
 # Packages can be installed from any enabled yum repo on the image.
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
-# this installs a package from fedora repos
-#dnf install -y 
 
 # Use a COPR Example:
 #
@@ -18,6 +13,7 @@ set -ouex pipefail
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
+
 ### add custom yum repos :
 tee /etc/yum.repos.d/vscode.repo << EOF
 [code]
@@ -40,12 +36,12 @@ EOF
 
 ### delete pkgs :
 dnf5 -y remove amd* \
-              nvidia* \
-              kde-partitionmanager \
-              kate \
-              krfb \
-              docker \
-              firefox
+               nvidia* \
+               kde-partitionmanager \
+               kate \
+               krfb \
+               docker \
+               firefox
 
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
@@ -84,11 +80,10 @@ dnf5 -y install vdpauinfo \
 ### groups :
 dnf5 -y group install development-tools virtualization
 
-### 
+### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
 
-#pip install topgrade
-#### Example for enabl a System Unit File
+#### Systemd Unit Files
 
 systemctl disable ModemManager.service \
                   lvm2-lvmpolld.socket \
@@ -97,7 +92,7 @@ systemctl disable ModemManager.service \
                   cups.socket
 
 systemctl enable libvirtd.socket \
-                  fail2ban.service \
-                  fwupd-refresh.timer \
-                  usbguard.service \
-                  rngd.service
+                 fail2ban.service \
+                 fwupd-refresh.timer \
+                 usbguard.service \
+                 rngd.service
