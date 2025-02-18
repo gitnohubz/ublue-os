@@ -65,7 +65,9 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 libreoffice \
                 tpm2-pkcs11 \
-                tpm2-openssl 
+                tpm2-openssl \
+                virt-install \
+                qemu-kvm 
 ### groups :
 dnf5 -y group install development-tools virtualization
 
@@ -78,8 +80,7 @@ dnf5 -y remove amd* \
                kde-partitionmanager \
                kate \
                krfb \
-               firefox \
-               libvirt*
+               firefox 
 
 #### Systemd Unit Files
 
