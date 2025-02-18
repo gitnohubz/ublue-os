@@ -76,9 +76,15 @@ dnf5 -y install vdpauinfo \
                 libreoffice \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                libvirt
+                virt-manager \
+                virt-viewer \
+                virt-install \
+                qemu-kvm \
+                virt-top \
+                guestfs-tools \
+                python3-libguestfs \
 ### groups :
-dnf5 -y group install development-tools virtualization
+dnf5 -y group install development-tools
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
