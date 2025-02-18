@@ -43,7 +43,7 @@ dnf5 -y install vdpauinfo \
                 intel-compute-runtime \
                 rng-tools \
                 krdc \
-                usbguard-notifier \
+                usbguard \
                 kile \
                 ktikz \
                 kbibtex \
