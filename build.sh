@@ -75,8 +75,7 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 libreoffice \
                 tpm2-pkcs11 \
-                tpm2-openssl \
-                libvirt
+                tpm2-openssl
 ### groups :
 dnf5 -y group install development-tools virtualization
 
@@ -91,7 +90,7 @@ systemctl disable ModemManager.service \
                   fstrim.service \
                   cups.socket
 
-systemctl enable libvirtd \
+systemctl enable libvirtd.service \
                  fail2ban.service \
                  fwupd-refresh.timer \
                  usbguard.service \
