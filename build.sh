@@ -44,7 +44,8 @@ dnf5 -y remove amd* \
               kde-partitionmanager \
               kate \
               krfb \
-              docker
+              docker \
+              firefox
 
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
