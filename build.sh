@@ -63,13 +63,12 @@ dnf5 -y install vdpauinfo \
                 vlc \
                 gwenview \
                 libreoffice-TexMaths \
-                libreoffice \
                 tpm2-pkcs11 \
                 tpm2-openssl \
                 virt-install \
                 qemu-kvm 
 ### groups :
-dnf5 -y group install development-tools virtualization
+dnf5 -y group install development-tools libreoffice
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
