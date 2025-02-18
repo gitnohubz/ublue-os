@@ -77,8 +77,7 @@ dnf5 -y install vdpauinfo \
                 tpm2-pkcs11 \
                 tpm2-openssl 
 ### groups :
-dnf5 -y group install development-tools
-#virtualization
+dnf5 -y group install development-tools virtualization
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
