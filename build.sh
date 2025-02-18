@@ -34,15 +34,6 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
-### delete pkgs :
-dnf5 -y remove amd* \
-               nvidia* \
-               kde-partitionmanager \
-               kate \
-               krfb \
-               docker \
-               firefox
-
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
                 libvdpau-va-gl \
@@ -75,19 +66,22 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 libreoffice \
                 tpm2-pkcs11 \
-                tpm2-openssl \
-                virt-manager \
-                virt-viewer \
-                virt-install \
-                qemu-kvm \
-                virt-top \
-                guestfs-tools \
-                python3-libguestfs
+                tpm2-openssl 
 ### groups :
-dnf5 -y group install development-tools
+dnf5 -y group install development-tools virtualization
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
+
+### delete pkgs :
+dnf5 -y remove amd* \
+               nvidia* \
+               kde-partitionmanager \
+               kate \
+               krfb \
+               docker \
+               firefox \
+               libvirt 
 
 #### Systemd Unit Files
 
