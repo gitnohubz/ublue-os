@@ -91,7 +91,7 @@ systemctl disable ModemManager.service \
                   fstrim.service \
                   cups.socket
 
-systemctl enable libvirtd.socket \
+systemctl enable libvirtd \
                  fail2ban.service \
                  fwupd-refresh.timer \
                  usbguard.service \
