@@ -82,7 +82,7 @@ dnf5 -y install vdpauinfo \
                 qemu-kvm \
                 virt-top \
                 guestfs-tools \
-                python3-libguestfs \
+                python3-libguestfs
 ### groups :
 dnf5 -y group install development-tools
 
