@@ -46,7 +46,6 @@ dnf5 -y install vdpauinfo \
                 kbibtex \
                 kitty \
                 kubernetes-client \
-                docker-compose \
                 fail2ban \
                 fastfetch \
                 podlet \
@@ -61,7 +60,7 @@ dnf5 -y install vdpauinfo \
                 kamoso \
                 syncthing \
                 okular \
-                elisa \
+                vlc \
                 gwenview \
                 libreoffice-TexMaths \
                 libreoffice \
@@ -79,9 +78,8 @@ dnf5 -y remove amd* \
                kde-partitionmanager \
                kate \
                krfb \
-               docker \
                firefox \
-               libvirt 
+               libvirt*
 
 #### Systemd Unit Files
 
