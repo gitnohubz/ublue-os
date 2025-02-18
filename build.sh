@@ -34,6 +34,9 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
+### groups :
+dnf5 -y group install development-tools libreoffice vlc
+
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
                 libvdpau-va-gl \
@@ -60,15 +63,12 @@ dnf5 -y install vdpauinfo \
                 kamoso \
                 syncthing \
                 okular \
-                vlc \
                 gwenview \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
                 virt-install \
                 qemu-kvm 
-### groups :
-dnf5 -y group install development-tools libreoffice
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
