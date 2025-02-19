@@ -35,7 +35,7 @@ gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.
 EOF
 
 ### groups :
-dnf5 -y group install development-tools libreoffice vlc
+dnf5 -y group install development-tools libreoffice vlc virtualization
 
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
@@ -66,9 +66,7 @@ dnf5 -y install vdpauinfo \
                 gwenview \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
-                tpm2-openssl \
-                virt-install \
-                qemu-kvm 
+                tpm2-openssl 
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
@@ -91,5 +89,4 @@ systemctl disable ModemManager.service \
 
 systemctl enable fail2ban.service \
                  fwupd-refresh.timer \
-                 usbguard.service \
                  rngd.service
