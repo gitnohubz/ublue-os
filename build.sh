@@ -66,7 +66,9 @@ dnf5 -y install vdpauinfo \
                 gwenview \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
-                tpm2-openssl 
+                tpm2-openssl \
+                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+                https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 ### resolve confilcts
 dnf5 -y install --allowerasing OpenCL-ICD-Loader
