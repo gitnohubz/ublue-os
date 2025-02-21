@@ -55,7 +55,6 @@ dnf5 -y install vdpauinfo \
                 gdisk \
                 code \
                 htop \
-                thunderbird \
                 torbrowser-launcher \
                 qbittorrent \
                 arianna \
