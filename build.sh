@@ -83,13 +83,16 @@ dnf5 -y remove amd* \
 
 #### Systemd Unit Files
 
-systemctl disable ModemManager.service \
-                  lvm2-lvmpolld.socket \
+systemctl disable lvm2-lvmpolld.socket \
+                  cups.socket \
+                  iscsid.socket \
+                  iscsiuio.socket \
+                  raid-check.timer \
+                  ModemManager.service \
                   lvm2-monitor.service \
                   fstrim.service \
-                  cups.socket
 
-systemctl enable fail2ban.service \
+systemctl enable libvirtd.socket \
                  fwupd-refresh.timer \
-                 libvirtd.socket \
+                 fail2ban.service \
                  rngd.service
