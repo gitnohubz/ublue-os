@@ -34,6 +34,8 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
+dnf5 copr enable chenxiaolong/sbctl
+
 ### groups :
 dnf5 -y group install development-tools libreoffice vlc virtualization
 
@@ -66,8 +68,7 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                kmodtool \
-                akmods
+                sbctl
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 #                https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
