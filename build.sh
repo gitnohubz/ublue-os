@@ -34,7 +34,7 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
-tee > /etc/yum.repos.d/oneAPI.repo << EOF
+tee > /etc/yum.repos.d/sbctl.repo << EOF
 [copr:copr.fedorainfracloud.org:chenxiaolong:sbctl]
 name=Copr repo for sbctl owned by chenxiaolong
 baseurl=https://download.copr.fedorainfracloud.org/results/chenxiaolong/sbctl/fedora-$releasever-$basearch/
