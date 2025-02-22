@@ -34,7 +34,18 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
-dnf5 copr enable chenxiaolong/sbctl
+tee > /etc/yum.repos.d/oneAPI.repo << EOF
+[copr:copr.fedorainfracloud.org:chenxiaolong:sbctl]
+name=Copr repo for sbctl owned by chenxiaolong
+baseurl=https://download.copr.fedorainfracloud.org/results/chenxiaolong/sbctl/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/chenxiaolong/sbctl/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
 
 ### groups :
 dnf5 -y group install development-tools libreoffice vlc virtualization
