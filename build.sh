@@ -73,7 +73,6 @@ dnf5 -y install vdpauinfo \
                 htop \
                 torbrowser-launcher \
                 qbittorrent \
-                arianna \
                 koko \
                 kamoso \
                 syncthing \
