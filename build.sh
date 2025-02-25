@@ -57,7 +57,7 @@ dnf5 -y group install --with-optional libreoffice virtualization
 dnf5 -y group install c-development vlc
 
 ### install pkgs : 
- dnf5 -y install vdpauinfo \
+dnf5 -y install vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
                 rng-tools \
