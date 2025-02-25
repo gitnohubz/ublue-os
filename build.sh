@@ -50,7 +50,7 @@ enabled=1
 enabled_metadata=1
 EOF
 
-run0 curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 rpm-ostree install brave-browser
 
 ### groups :
