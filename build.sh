@@ -50,7 +50,7 @@ enabled=1
 enabled_metadata=1
 EOF
 
-dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+run0 curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 ### groups :
 dnf5 -y group install --with-optional libreoffice virtualization
@@ -85,7 +85,6 @@ dnf5 -y install vdpauinfo \
                 tpm2-pkcs11 \
                 tpm2-openssl \
                 sbctl \
-                brave-browser \
                 chromium
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -100,6 +99,9 @@ dnf5 -y remove amd* \
                kde-partitionmanager \
                kate \
                krfb 
+
+### rpm-ostree pkgs :
+run0 rpm-ostree install brave-browser
 
 #### Systemd Unit Files
 
