@@ -51,7 +51,7 @@ enabled_metadata=1
 EOF
 
 ### groups :
-dnf5 -y group install --with-optional libreoffice virtualization
+dnf5 -y group install --with-optional libreoffice virtualization system-tools
 dnf5 -y group install c-development development-tools vlc
 
 ### install pkgs : 
@@ -66,7 +66,6 @@ dnf5 -y install vdpauinfo \
                 kbibtex \
                 kitty \
                 kubernetes-client \
-                fail2ban \
                 fastfetch \
                 podlet \
                 gdisk \
@@ -82,9 +81,9 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                sbctl 
-
-dnf5 -y install chromium
+                sbctl \
+                unrar \
+                chromium
                 
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
