@@ -51,7 +51,7 @@ enabled_metadata=1
 EOF
 
 curl -fsSLo /etc/yum.repos.d/brave-browser.repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-rpm-ostree -y install brave-browser
+rpm-ostree install --assumeyes brave-browser
 
 ### groups :
 dnf5 -y group install --with-optional libreoffice virtualization
