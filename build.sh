@@ -50,12 +50,14 @@ enabled=1
 enabled_metadata=1
 EOF
 
+dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+
 ### groups :
 dnf5 -y group install --with-optional libreoffice virtualization
 dnf5 -y group install c-development vlc
 
 ### install pkgs : 
-dnf5 -y install vdpauinfo \
+ dnf5 -y install vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
                 rng-tools \
@@ -82,8 +84,8 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                sbctl 
-
+                sbctl \
+                brave-browser 
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 #                https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -96,8 +98,7 @@ dnf5 -y remove amd* \
                nvidia* \
                kde-partitionmanager \
                kate \
-               krfb \
-               firefox 
+               krfb 
 
 #### Systemd Unit Files
 
