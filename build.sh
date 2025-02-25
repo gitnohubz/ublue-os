@@ -85,7 +85,8 @@ dnf5 -y install vdpauinfo \
                 tpm2-pkcs11 \
                 tpm2-openssl \
                 sbctl \
-                brave-browser 
+                brave-browser \
+                chromium
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 #                https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
