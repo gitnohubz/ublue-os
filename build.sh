@@ -82,8 +82,9 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                sbctl \
-                chromium
+                sbctl 
+
+dnf5 -y install chromium
                 
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
