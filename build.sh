@@ -51,7 +51,8 @@ enabled_metadata=1
 EOF
 
 ### groups :
-dnf5 -y group install development-tools libreoffice vlc virtualization
+dnf5 -y group install --with-optional libreoffice virtualization
+dnf5 -y group install c-development vlc
 
 ### install pkgs : 
 dnf5 -y install vdpauinfo \
@@ -81,7 +82,8 @@ dnf5 -y install vdpauinfo \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
                 tpm2-openssl \
-                sbctl
+                sbctl 
+
                 
 #                https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 #                https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -106,7 +108,7 @@ systemctl disable lvm2-lvmpolld.socket \
                   raid-check.timer \
                   ModemManager.service \
                   lvm2-monitor.service \
-                  fstrim.service \
+                  fstrim.service 
 
 systemctl enable libvirtd.socket \
                  fwupd-refresh.timer \
