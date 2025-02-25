@@ -70,7 +70,6 @@ dnf5 -y install vdpauinfo \
                 podlet \
                 gdisk \
                 code \
-                htop \
                 torbrowser-launcher \
                 qbittorrent \
                 koko \
