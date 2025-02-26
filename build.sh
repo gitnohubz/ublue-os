@@ -27,7 +27,7 @@ enabled=1
 enabled_metadata=1
 EOF
 
-dnf -y config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 ##############################
 ##############################
