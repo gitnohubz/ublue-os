@@ -2,6 +2,6 @@
 
 set -ouex pipefail
 
-sh/repo.sh
-sh/pkg.sh
-sh/services.sh
+/tmp/sh/repo.sh
+/tmp/sh/pkg.sh
+/tmp/sh/services.sh
