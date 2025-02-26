@@ -27,6 +27,10 @@ enabled=1
 enabled_metadata=1
 EOF
 
+tee /usr/lib/tmpfiles.d/brave-browser.conf << EOF
+L  /opt/brave-browser  -  -  -  -  /usr/lib64/brave-browser
+EOF
+
 dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 ##############################
@@ -93,7 +97,3 @@ systemctl enable libvirtd.socket \
 #####################################
 #####################################
 mv /var/opt/* /usr/lib64/*
-
-tee /usr/lib/tmpfiles.d/brave-browser.conf << EOF
-L  /opt/brave-browser  -  -  -  -  /usr/lib64/brave-browser
-EOF
