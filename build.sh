@@ -94,6 +94,6 @@ systemctl enable libvirtd.socket \
 #####################################
 mv /var/opt/* /usr/lib64/*
 
-cat >/usr/lib/tmpfiles.d/brave-browser.conf <<EOF
+tee /usr/lib/tmpfiles.d/brave-browser.conf << EOF
 L  /opt/brave-browser  -  -  -  -  /usr/lib64/brave-browser
 EOF
