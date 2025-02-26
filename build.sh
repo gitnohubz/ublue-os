@@ -68,6 +68,7 @@ dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 htop \
                 fail2ban \
                 brave-browser \
+                podman-compose \
                 nmap-ncat \
                 dialog
 
