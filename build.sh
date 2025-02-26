@@ -96,4 +96,4 @@ systemctl enable libvirtd.socket \
 
 #####################################
 #####################################
-mv /var/opt/* /usr/lib64/*
+mv /var/opt/* /usr/lib64/
