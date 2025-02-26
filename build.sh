@@ -67,7 +67,9 @@ dnf -y install --setopt=max_parallel_downloads=30 vdpauinfo \
                 chromium \
                 htop \
                 fail2ban \
-                brave-browser
+                brave-browser \
+                nmap-ncat \
+                dialog
 
 
 dnf -y install --allowerasing OpenCL-ICD-Loader
