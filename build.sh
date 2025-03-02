@@ -71,7 +71,8 @@ dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 nmap-ncat \
                 dialog \
                 kmodtool \
-                akmods
+                akmods \
+                chromium
 
 dnf -y remove   amd* \
                 nvidia* \
