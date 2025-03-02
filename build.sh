@@ -54,7 +54,10 @@ dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 koko \
                 kamoso \
                 syncthing \
+                kile \
+                ktikz \
                 okular \
+                kbibtex \
                 gwenview \
                 libreoffice-TexMaths \
                 tpm2-pkcs11 \
