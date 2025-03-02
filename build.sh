@@ -36,16 +36,13 @@ dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.
 ##############################
 ##############################
 
-dnf -y group install --setopt=max_parallel_downloads=20 c-development development-tools vlc virtualization libreoffice
+dnf -y group install --setopt=max_parallel_downloads=20 c-development development-tools vlc virtualization
 dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
                 rng-tools \
                 krdc \
                 usbguard \
-                kile \
-                ktikz \
-                kbibtex \
                 kitty \
                 kubernetes-client \
                 fastfetch \
@@ -64,21 +61,19 @@ dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 tpm2-openssl \
                 sbctl \
                 unrar \
-                chromium \
                 htop \
                 fail2ban \
                 brave-browser \
                 podman-compose \
                 nmap-ncat \
-                dialog
+                dialog \
+                kmodtool \
+                akmods
 
-
-dnf -y install --allowerasing OpenCL-ICD-Loader
 dnf -y remove   amd* \
                 nvidia* \
                 kde-partitionmanager \
-                kate \
-                krfb
+                kate 
 
 #####################################
 #####################################
