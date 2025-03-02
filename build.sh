@@ -36,7 +36,7 @@ dnf -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.
 ##############################
 ##############################
 
-dnf -y group install --setopt=max_parallel_downloads=20 c-development development-tools vlc virtualization
+dnf -y group install --setopt=max_parallel_downloads=20 c-development development-tools vlc virtualization libreoffice
 dnf -y install --setopt=max_parallel_downloads=20 vdpauinfo \
                 libvdpau-va-gl \
                 intel-compute-runtime \
